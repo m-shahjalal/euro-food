@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useContext, useEffect, useState } from 'react';
 import { ProductContext } from '../../contexts/ProductContext';
 import Popup from '../Popup/Popup';
 import './Single.css';

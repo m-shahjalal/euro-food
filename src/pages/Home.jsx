@@ -1,5 +1,4 @@
-import React from 'react';
-import { useContext } from 'react/cjs/react.development';
+import React, { useContext } from 'react';
 import Single from '../components/Single/Single';
 import { ProductContext } from '../contexts/ProductContext';
 
