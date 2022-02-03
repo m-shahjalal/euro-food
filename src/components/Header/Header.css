@@ -1,0 +1,89 @@
+.header {
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--white);
+	border-bottom: 2px solid var(--green);
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+.header_left-logo {
+	margin: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.3rem;
+	color: var(--green);
+}
+
+.header-logo {
+	width: 125px;
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header_right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header_right-item {
+	color: var(--green);
+	text-decoration: none;
+	font-weight: 500;
+	margin: 0 20px;
+	padding: 0 5;
+}
+hr {
+	color: white;
+	width: 100%;
+}
+
+.header_hamburger {
+	display: none;
+	width: 30px;
+}
+
+.cart_counter {
+	background: var(--orange);
+	padding: 3px 8px;
+	right: 12px;
+	font-size: 0.7rem;
+	top: 10px;
+	position: fixed;
+	color: white;
+	border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+	.header-location,
+	.header-signin {
+		display: none;
+	}
+	.header_hamburger {
+		display: block;
+		position: absolute;
+	}
+	.header {
+		font-size: 0.9rem;
+	}
+	.header-logo {
+		margin-left: 20px;
+		color: var(--green);
+	}
+	.fa-search,
+	.fa-cart-plus,
+	.fa-bars {
+		width: 15px;
+		height: 15px;
+		font-size: 15px;
+	}
+}

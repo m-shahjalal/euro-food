@@ -1,0 +1,185 @@
+.card_container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+.homearea_card {
+	box-shadow: 0 3px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+	margin-top: 20px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 7px;
+	padding: 0 6px;
+}
+.homearea_card:hover .card_overlay {
+	display: flex;
+	bottom: 0;
+	opacity: 1;
+}
+
+.homearea_card-tag {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 12px;
+	background: var(--green);
+	padding: 5px 10px;
+	border-radius: 4px;
+	color: white;
+	z-index: 10;
+}
+.homearea_card-media {
+	margin: auto;
+	width: 120px;
+	height: 120px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.img-responsive {
+	width: 100%;
+	transition: 0.5s;
+	z-index: 9;
+	margin: auto;
+	-webkit-transform: scale(1.4);
+	transform: scale(1.4);
+	overflow: hidden;
+}
+
+.homearea_card-title {
+	text-align: center;
+	font-size: 1.1rem;
+	color: var(--text);
+}
+.homearea_card-count {
+	color: var(--orange);
+	margin-top: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.homearea_card-price {
+	color: var(--text);
+	text-align: center;
+}
+
+.homearea_card-num {
+	font-size: 20px;
+	font-weight: bold;
+	color: gray;
+}
+
+.homearea_card-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	width: 90%;
+	margin: auto;
+	padding: 10px;
+	color: var(--text);
+}
+
+.homearea_card-button {
+	/* background: var(--green); */
+	border: 1px solid var(--green);
+	padding: 5px;
+	text-align: center;
+	color: var(--green);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+	position: absolute;
+	bottom: -45px;
+	right: -6px;
+	left: -6px;
+	z-index: 10;
+	transition: 0.5s color ease-in-out;
+	transition: 0.5s background-color ease-in-out;
+	transition: 0.5s border-color ease-in-out;
+}
+.homearea_card-button:hover {
+	background: var(--green);
+	color: white;
+	border-color: var(--green);
+}
+.card_overlay {
+	position: absolute;
+	top: 0;
+	height: calc(100% - 50px);
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	bottom: -100%;
+	opacity: 0;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	border-radius: 7px 7px;
+	padding-top: 50px;
+	transition: 0.8s all ease;
+}
+.card_overlay > * {
+	border: 1px solid white;
+	padding: 4px 10px;
+	margin: 5px;
+	border-radius: 4px;
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background: white;
+	color: var(--text);
+	transition: 0.7s ease;
+}
+.card_overlay div:hover {
+	background: transparent;
+	color: white;
+}
+
+.homearea_card-button_added {
+	background: var(--orange);
+	border-color: var(--orange);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+}
+
+.homearea_card-button_added span {
+	width: 40px;
+}
+
+.homearea_card-button_added p {
+	flex: 1;
+	border-right: 1px solid #57575771;
+	border-left: 1px solid #57575771;
+	padding: 5px;
+}
+
+.homearea_card-button_added span:hover {
+	color: var(--text);
+}
+
+.overlay_inner-text {
+	padding: 0 10px;
+}
+.overlay_controller {
+	display: flex;
+	justify-content: space-between;
+	cursor: default;
+}
+.overlay_controller span {
+	cursor: pointer;
+}
