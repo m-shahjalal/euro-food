@@ -15,7 +15,9 @@ const ProductProvider = ({ children }) => {
 	const getCategory = (url) => {
 		const query = `category=${url.substring(1)}`;
 		axios
-			.get(`http://localhost:5000/products?${query}`)
+			.get(
+				`https://thawing-plateau-16300.herokuapp.com/products?${query}`
+			)
 			.then((data) => setProduct(data?.data))
 			.catch((e) => setError(e.message))
 			.finally(() => setLoading(false));
@@ -56,7 +58,7 @@ const ProductProvider = ({ children }) => {
 	useEffect(() => localStorage.setItem('cart', JSON.stringify(cart)), [cart]);
 	useEffect(() => {
 		axios
-			.get(`http://localhost:5000/products`)
+			.get(`https://thawing-plateau-16300.herokuapp.com/products`)
 			.then((data) => setAll(data.data))
 			.catch((err) => setError(err.message))
 			.finally(() => setInitial(false));
